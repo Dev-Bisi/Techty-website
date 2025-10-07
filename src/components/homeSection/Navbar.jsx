@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -39,17 +40,17 @@ const Navbar = () => {
           transition={{ duration: 0.5 }}
           className="hidden sm:flex flex-row gap-6 md:gap-10 items-center"
         >
-          <a href="/" className="hover:text-green-400 transition">Home</a>
-          <a href="/about" className="hover:text-green-400 transition">About</a>
-          <a href="/service" className="hover:text-green-400 transition">Service</a>
-          <a href="/blog" className="hover:text-green-400 transition">Blog</a>
-          <a href="/contact" className="hover:text-green-400 transition">Contact</a>
-          <a
-            href=""
+          <Link to="/" className="hover:text-green-400 transition">Home</Link>
+          <Link to="/about" className="hover:text-green-400 transition">About</Link>
+          <Link to="/service" className="hover:text-green-400 transition">Service</Link>
+          <Link to="/blog" className="hover:text-green-400 transition">Blog</Link>
+          <Link to="/contact" className="hover:text-green-400 transition">Contact</Link>
+          <Link
+            to="#"
             className="rounded bg-black text-white px-3 py-2 text-sm sm:text-base hover:bg-green-500 transition"
           >
             Request a Free Demo
-          </a>
+          </Link>
         </motion.div>
       </div>
 
@@ -63,17 +64,17 @@ const Navbar = () => {
             transition={{ duration: 0.4 }}
             className="flex flex-col gap-4 mt-4 sm:hidden"
           >
-            <a href="/" className="hover:text-green-400">Home</a>
-            <a href="/about" className="hover:text-green-400">About</a>
-            <a href="/service" className="hover:text-green-400">Service</a>
-            <a href="/blog" className="hover:text-green-400">Blog</a>
-            <a href="/contact" className="hover:text-green-400">Contact</a>
-            <a
-              href=""
+            <Link to="/" className="hover:text-green-400">Home</Link>
+            <Link to="/about" className="hover:text-green-400">About</Link>
+            <Link to="/service" className="hover:text-green-400">Service</Link>
+            <Link to="/blog" className="hover:text-green-400">Blog</Link>
+            <Link to="/contact" className="hover:text-green-400">Contact</Link>
+            <Link
+              to="#"
               className="rounded bg-black text-white px-3 py-2 text-sm hover:bg-green-500 transition"
             >
               Request a Free Demo
-            </a>
+            </Link>
           </motion.div>
         )}
       </AnimatePresence>
